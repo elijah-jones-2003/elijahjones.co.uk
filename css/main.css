@@ -1,0 +1,205 @@
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: #12460a; /* Light gray background */
+  color: #343a40; /* Dark text */
+  padding: 4rem 0; /* Top and bottom padding */
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.hero-section .btn-primary {
+  background-color: #007bff; /* Bootstrap's primary blue */
+  border-color: #007bff;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+}
+
+.hero-section img {
+  max-width: 100%; /* Make sure image doesn't overflow */
+  border-radius: 50%; /* Keep it a circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Me Section Styles */
+.about-section {
+    background-color: #ffffff; /* White background */
+    color: #343a40; /* Dark text */
+}
+
+.about-section h2 {
+    color: #007bff; /* Primary blue for the heading */
+    margin-bottom: 1.5rem;
+}
+
+.about-section .lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-section .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.about-section .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.about-section ul {
+    list-style: none; /* Ensure no default bullets */
+    padding-left: 0;
+}
+
+.about-section ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.about-section ul li i {
+    color: #007bff; /* Color for icons */
+}
+
+/* Projects Section Styles */
+.projects-section {
+    background-color: #f8f9fa; /* Light background for separation */
+    color: #343a40; /* Dark text */
+}
+
+.projects-section h2 {
+    color: #007bff; /* Primary blue for the heading */
+    margin-bottom: 2.5rem; /* More space below heading */
+}
+
+.projects-section .card {
+    border: none; /* Remove default card border */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.projects-section .card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important; /* More pronounced shadow on hover */
+}
+
+.projects-section .card-img-top {
+    border-top-left-radius: calc(0.25rem - 1px); /* Match Bootstrap's rounded corners */
+    border-top-right-radius: calc(0.25rem - 1px);
+    height: 200px; /* Fixed height for project images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+.projects-section .card-title {
+    color: #343a40; /* Darker title color */
+    font-weight: bold;
+}
+
+.projects-section .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.projects-section .btn-primary {
+    background-color: #007bff; /* Your primary button color */
+    border-color: #007bff;
+}
+
+.projects-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.projects-section .btn-outline-secondary {
+    border-color: #6c757d; /* Bootstrap secondary color */
+    color: #6c757d;
+}
+
+.projects-section .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #e9ecef; /* Light gray for separation */
+    color: #343a40; /* Dark text */
+}
+
+.contact-section h2 {
+    color: #007bff; /* Primary blue heading */
+}
+
+.contact-section .contact-item a {
+    color: #007bff; /* Link color */
+    font-weight: bold;
+}
+
+.contact-section .contact-item a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline !important; /* Emphasize underline on hover */
+}
+
+.contact-section .contact-item i {
+    color: #007bff; /* Icon color for email */
+}
+
+.contact-section .social-icon {
+    color: #6c757d; /* Default social icon color (Bootstrap secondary) */
+    transition: color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.contact-section .social-icon:hover {
+    color: #007bff; /* Primary blue on hover */
+}
+
+/* Styles for the optional form, if you uncomment it later */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section Styles */
+.footer-section {
+    background-color: #343a40; /* Dark background */
+    color: #f8f9fa; /* Light text */
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section .social-icon-footer {
+    color: #f8f9fa; /* Light icons */
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-section .social-icon-footer:hover {
+    color: #007bff; /* Primary blue on hover */
+}
