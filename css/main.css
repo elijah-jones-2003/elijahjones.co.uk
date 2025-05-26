@@ -203,3 +203,39 @@ html {
 .footer-section .social-icon-footer:hover {
     color: #007bff; /* Primary blue on hover */
 }
+
+/* Project Detail Page Styles */
+.project-detail-section {
+    background-color: #f8f9fa; /* Light background */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.project-detail-section h1,
+.project-detail-section h3 {
+    color: #007bff; /* Primary blue headings */
+    font-weight: bold;
+}
+
+.project-detail-section .lead {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.project-detail-section img {
+    border-radius: 0.5rem; /* Slightly rounded corners for images */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.project-detail-section .list-unstyled li {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+.project-detail-section .list-unstyled li i {
+    color: #007bff; /* Icons in lists */
+}
+
+.project-detail-section .btn {
+    margin-top: 1rem; /* Space below buttons */
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project: 3 - Elijah Jones</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="../css/main.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Elijah Jones Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-detail-section py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-4">AI Cars</h1>
+            <p class="lead text-center mb-5">
+                My first large-scale project, designed to explore neural networks and genetic algorithms through a driving simulation.
+            </p>
+
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-7">
+                    <img src="../images/ai-cars-screenshot.png" alt="AI Cars Project Screenshot" class="img-fluid rounded shadow-sm mb-4 mb-md-0">
+                </div>
+                <div class="col-md-5">
+                    <h3 class="fw-bold mb-3">Project Overview</h3>
+                    <p>
+                        This project involved implementing a neural network from scratch in Python, where the "brains" of the AI cars were trained using a genetic algorithm. The cars learned to navigate a track efficiently by avoiding obstacles and finding optimal paths.
+                    </p>
+                    <p>
+                        It was a fascinating challenge to simulate evolution, observe emergent behaviors, and visualize the learning process in real-time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h3 class="fw-bold mb-3">Technologies Used</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-file-earmark-code-fill me-2"></i> **Python:** Core programming language</li>
+                        <li><i class="bi bi-calculator-fill me-2"></i> **NumPy:** For efficient array operations in neural network calculations</li>
+                        <li><i class="bi bi-joystick me-2"></i> **Pygame:** For the graphical simulation and rendering</li>
+                        <li><i class="bi bi-cpu-fill me-2"></i> **Custom Neural Network Implementation:** From activation functions to forward propagation</li>
+                        <li><i class="bi bi-dna me-2"></i> **Genetic Algorithm:** For optimizing neural network weights</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bold mb-3">Challenges & Learnings</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-exclamation-triangle-fill me-2"></i> **Optimization:** Ensuring the simulation ran smoothly with many cars and complex calculations.</li>
+                        <li><i class="bi bi-lightbulb-fill me-2"></i> **Visualizing Learning:** Designing clear graphical feedback to understand how the AI was evolving.</li>
+                        <li><i class="bi bi-book-fill me-2"></i> **Deep Dive into AI:** Gaining a foundational understanding of neural networks and evolutionary algorithms.</li>
+                        <li><i class="bi bi-bezier2 me-2"></i> **Collision Detection:** Implementing accurate and efficient collision detection for cars and track boundaries.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3">Links & Resources</h3>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="[Link to Live Demo if available, e.g., video or online simulation]" class="btn btn-primary btn-lg px-4 me-md-2 mb-2 mb-md-0" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-play-circle-fill me-2"></i> View Demo
+                        </a>
+                        <a href="[Link to GitHub Repo for AI Cars]" class="btn btn-outline-dark btn-lg px-4 me-md-2 mb-2 mb-md-0" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github me-2"></i> GitHub Repo
+                        </a>
+                        <a href="[Link to Project Documentation/Report/Blog Post]" class="btn btn-outline-info btn-lg px-4 mb-2 mb-md-0" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-journal-text me-2"></i> Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="text-center">
+                <a href="../index.html#projects" class="btn btn-secondary btn-lg">
+                    <i class="bi bi-arrow-left-circle-fill me-2"></i> Back to All Projects
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-section py-4 text-center">
+        <div class="container">
+            <p class="mb-0">
+                &copy; <span id="current-year-project"></span> Elijah Jones. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcCWihsufgTzFNlI+N" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('current-year-project').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
