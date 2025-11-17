@@ -1,194 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="css/main.css" rel="stylesheet">
-    <title>Elijah Jones - Personal Portfolio</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Raspberry Pi Portfolio</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    margin: 0;
+    font-family: sans-serif;
+  }
 
+  svg {
+    width: 80%;
+    height: auto;
+  }
+
+  /* LED hover effect */
+  .led {
+    fill: #F4E387;
+    transition: fill 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+
+  .led.hovered {
+    fill: red;
+    transform: scale(1.2);
+  }
+
+  /* Clickable screen effect */
+  #screen {
+    fill: #F8F3EC;
+    cursor: pointer;
+    transition: fill 0.3s;
+  }
+
+  #screen.active {
+    fill: #C8BEB4;
+  }
+</style>
+</head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Elijah Jones</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Inline SVG -->
+<svg width="1307" height="848" viewBox="0 0 1307 848" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_2_560)">
+        <g opacity="0.4" filter="url(#filter0_f_2_560)">
+            <rect x="27" y="16" width="1200" height="800" rx="40" fill="url(#paint0_radial_2_560)"/>
+            <rect x="28.5" y="17.5" width="1197" height="797" rx="38.5" stroke="#00A384" stroke-width="3"/>
+        </g>
+        <g clip-path="url(#clip0_2_560)">
+            <circle id="led1" class="led" cx="72" cy="60" r="40"/>
+            <circle id="led2" class="led" cx="70" cy="769" r="40"/>
+            <circle id="led3" class="led" cx="883" cy="770" r="40"/>
+            <circle id="led4" class="led" cx="885" cy="64" r="40"/>
+            <rect id="screen" x="364" y="358" width="240" height="240" rx="5" fill="#F8F3EC"/>
+            <rect x="28.5" y="17.5" width="1197" height="797" rx="38.5" fill="url(#paint1_radial_2_560)" stroke="#06AF8F" stroke-width="3"/>
+            <circle cx="72" cy="60" r="40" fill="#F4E387"/>
+            <circle cx="72" cy="60" r="20" fill="#B2ACAC"/>
+            <circle cx="70" cy="769" r="40" fill="#F4E387"/>
+            <circle cx="70" cy="769" r="20" fill="#B2ACAC"/>
+            <circle cx="883" cy="770" r="40" fill="#F4E387"/>
+            <circle cx="883" cy="770" r="20" fill="#B2ACAC"/>
+            <circle cx="885" cy="64" r="40" fill="#F4E387"/>
+            <circle cx="885" cy="64" r="20" fill="#B2ACAC"/>
+            <g filter="url(#filter1_d_2_560)">
+                <circle cx="135" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="135" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="171" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="171" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="569" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="569" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="605" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="605" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="787" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="787" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="823" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="823" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="715" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="715" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="751" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="751" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="641" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="641" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="677" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="677" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="495" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="495" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="531" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="531" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="425" cy="42" r="5" fill="#CAD0CC"/>
+                <circle cx="425" cy="79" r="5" fill="#CAD0CC"/>
+                <circle cx="461" cy="79" r="5" fill="#CAD0CC"/>
+                <circle cx="461" cy="42" r="5" fill="#CAD0CC"/>
+                <circle cx="351" cy="42" r="5" fill="#CAD0CC"/>
+                <circle cx="351" cy="79" r="5" fill="#CAD0CC"/>
+                <circle cx="387" cy="79" r="5" fill="#CAD0CC"/>
+                <circle cx="387" cy="42" r="5" fill="#CAD0CC"/>
+                <circle cx="281" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="281" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="317" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="317" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="207" cy="41" r="5" fill="#CAD0CC"/>
+                <circle cx="207" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="243" cy="78" r="5" fill="#CAD0CC"/>
+                <circle cx="243" cy="41" r="5" fill="#CAD0CC"/>
+                <path d="M1023 50C1023 44.4771 1027.48 40 1033 40H1273V230H1033C1027.48 230 1023 225.523 1023 220V50Z" fill="#C8BEB4"/>
+                <path d="M971 558C971 552.477 975.477 548 981 548H1273V778H981C975.477 778 971 773.523 971 768V558Z" fill="#C8BEB4"/>
+                <path d="M1023 315C1023 309.477 1027.48 305 1033 305H1273V495H1033C1027.48 495 1023 490.523 1023 485V315Z" fill="#C8BEB4"/>
+                <rect x="122" y="109" width="149" height="179" rx="5" fill="#C8BEB4"/>
+                <path d="M538 719C538 713.477 542.477 709 548 709H601C606.523 709 611 713.477 611 719V825H538V719Z" fill="#C8BEB4"/>
+                <rect x="767" y="564" width="42" height="239" rx="5" fill="#A2775B"/>
+                <rect x="81" y="320" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="81" y="351" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="81" y="382" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="81" y="413" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="39" y="276" width="42" height="191" fill="#86634B"/>
+                <rect x="682" y="564" width="42" height="239" rx="5" fill="#A2775B"/>
+                <path d="M345 719C345 713.477 349.477 709 355 709H408C413.523 709 418 713.477 418 719V825H345V719Z" fill="#C8BEB4"/>
+                <path d="M113 736C113 724.954 121.954 716 133 716H213C224.046 716 233 724.954 233 736V825H113V736Z" fill="#C8BEB4"/>
+                <rect x="138" y="544" width="80" height="80" rx="2" fill="#474849"/>
+                <rect x="243" y="555" width="31" height="55" rx="2" fill="#474849"/>
+                <rect x="81" y="544" width="31" height="63" rx="2" fill="#474849"/>
+                <rect x="132" y="651" width="139" height="26" rx="2" fill="#474849"/>
+                <rect x="364" y="358" width="240" height="240" rx="5" fill="#F8F3EC"/>
+                <rect x="758" y="224" width="170" height="170" rx="10" fill="#474849"/>
+                <rect x="387" y="179" width="200" height="140" rx="5" fill="#474849"/>
+                <rect x="860" y="481.569" width="80" height="80.1221" rx="5" transform="rotate(-45 860 481.569)" fill="#474849"/>
+                <circle cx="884.5" cy="147.5" r="22.5" fill="#FDFFFA"/>
+                <circle cx="70.5" cy="664.5" r="22.5" fill="#FDFFFA"/>
+                <rect x="848" y="635" width="70" height="66" rx="10" fill="#4C4D4F"/>
+                <circle cx="865" cy="650" r="5" fill="#CAD0CC"/>
+                <circle cx="900" cy="650" r="5" fill="#CAD0CC"/>
+                <circle cx="865" cy="686" r="5" fill="#CAD0CC"/>
+                <circle cx="900" cy="686" r="5" fill="#CAD0CC"/>
+                <rect x="101" y="492" width="64" height="35" fill="#E2E5D9"/>
+                <rect x="101" y="499" width="64" height="21" fill="#919C94"/>
+                <rect x="195" y="492" width="62" height="35" fill="#E2E5D9"/>
+                <rect x="195" y="499" width="62" height="21" fill="#919C94"/>
+                <rect x="797" y="97" width="21" height="49" fill="#534D50"/>
+                <rect x="818" y="103" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="777" y="133" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="777" y="118" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="777" y="103" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="818" y="133" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="818" y="118" width="20" height="9" fill="#AFCDC1"/>
+                <rect x="940" y="133" width="61" height="97" rx="5" fill="#474849"/>
+                <rect x="12" y="518" width="13" height="37" rx="1" fill="#9F9F9F"/>
+                <rect x="23" y="500" width="28" height="76" rx="1" fill="#CED1C6"/>
+                <path d="M26 508C26 507.448 26.4477 507 27 507H51V567H27C26.4477 567 26 566.552 26 566V508Z" fill="#474849"/>
+                <path d="M51 518H63C63.5523 518 64 518.448 64 519V554C64 554.552 63.5523 555 63 555H51V518Z" fill="#474849"/>
+                <rect x="933" y="19" width="47.3249" height="99" rx="10" fill="#FFF0F8"/>
+                <rect x="940" y="32" width="33.4538" height="72.439" rx="10" fill="#E9BA6C"/>
+                <rect x="122" y="24" width="715" height="73" rx="10" fill="#4C4D4F"/>
+            </g>
+        </g>
+    </g>
 
-    <header class="hero-section text-white text-center d-flex align-items-center" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-2">
-                    <img src="images/elijah_placeholder.jpeg" alt="Profile Picture" class="img-fluid rounded-circle mb-4 mb-md-0">
-                </div>
-                <div class="col-md-6 order-md-1 text-md-start">
-                    <h1 class="display-4 fw-bold">Hello, I'm Elijah Jones</h1>
-                    <p class="lead mb-4">I'm a computer science student.</p>
-                    <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <defs>
+        <filter id="filter0_f_2_560" x="-33" y="-44" width="1320" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="30" result="effect1_foregroundBlur_2_560"/>
+        </filter>
+        <filter id="filter1_d_2_560" x="8" y="19" width="1269" height="814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_560"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_560" result="shape"/>
+        </filter>
+        <radialGradient id="paint0_radial_2_560" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(627 416) scale(600 900)">
+            <stop stop-color="#26916A"/>
+            <stop offset="1" stop-color="#22C88B" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint1_radial_2_560" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(627 416) scale(600 900)">
+            <stop stop-color="#22C88B"/>
+            <stop offset="1" stop-color="#26916A"/>
+        </radialGradient>
+        <clipPath id="clip0_2_560">
+            <rect width="1307" height="848" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>
 
-    <section id="about" class="about-section py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-                    <h2 class="display-5 fw-bold mb-4">About Me:</h2>
-                    <p>
-                        Hello! I'm Elijah Jones, a student at the University of York studying Computer Science. 
-                        I started coding when I was around 13-14, making games in python and scratch.
-                    </p>
-                    <p>
-                        I enjoy working on longer tasks that involve creative thinking and applying knowledge from outside my own course. 
-                        Currently, I'm focusing on this site.
-                    </p>
-                    <p>
-                        Outisde of CS I really enjoy weightlifting and playing american football.
-                    </p>
-                    <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">Contact Me</a>
-                </div>
+<script>
+  // LED hover interaction
+  const leds = document.querySelectorAll('.led');
+  leds.forEach(led => {
+    led.addEventListener('mouseenter', () => led.classList.add('hovered'));
+    led.addEventListener('mouseleave', () => led.classList.remove('hovered'));
+    led.addEventListener('click', () => alert("LED clicked!"));
+  });
 
-                <div class="col-lg-5">
-                    <h3 class="fw-bold mb-3">My Skills:</h3>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-code-slash me-2"></i> Python</li>
-                                <li><i class="bi bi-code-slash me-2"></i> Java</li>
-                                <li><i class="bi bi-code-slash me-2"></i> HTML/CSS/JS</li>
-                                <li><i class="bi bi-git me-2"></i> Git/GitHub</li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-window-split me-2"></i> C</li>
-                                <li><i class="bi bi-lightbulb me-2"></i> Rust</li>
-                                <li><i class="bi bi-people me-2"></i> Swift</li>
-                                <li><i class="bi bi-book me-2"></i> Machine Learning</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section py-5">
-        <div class="container">
-            <h2 class="display-5 fw-bold text-center mb-5">My Projects</h2>
-
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/ai-cars-screenshot.png" class="card-img-top" alt="AI Cars Project Thumbnail"> <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">AI Cars</h5>
-                            <p class="card-text">My first large scale project, done fro my A-levels, implemented a neural network from scratch, where the weights are "learned" via a genetic algorithm</p>
-                            <div class="mt-auto">
-                                <a href="project_pages/ai_cars.html" class="btn btn-primary btn-sm me-2">Learn More</a>
-                                <a href="[Link to GitHub Repo for AI Cars]" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250/28a745/FFFFFF?text=Project+2+Image" class="card-img-top" alt="Project 2 Thumbnail">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">RAT-Net</h5>
-                            <p class="card-text">Desciption goes here</p>
-                            <div class="mt-auto">
-                                <a href="project_pages/RAT-Net.html" class="btn btn-primary btn-sm me-2">Learn More</a>
-                                <a href="[Link to GitHub Repo for RAT-Net]" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250/ffc107/FFFFFF?text=Project+3+Image" class="card-img-top" alt="Project 3 Thumbnail">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Project Three</h5>
-                            <p class="card-text">Description here.</p>
-                            <div class="mt-auto">
-                                <a href="project_pages/project3.html" class="btn btn-primary btn-sm me-2">Learn More</a>
-                                <a href="[Link to GitHub Repo for project3]" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section py-5 text-center">
-        <div class="container">
-            <h2 class="display-5 fw-bold mb-4">Contact Me</h2>
-            <p class="lead mb-5">
-                If you have any questions, feel free to contact me
-            </p>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="contact-item mb-4">
-                        <i class="bi bi-envelope-fill me-2"></i> Email: <a href="mailto:notarealemail@gmail.com" class="text-decoration-none">notarealemail@gmail.com</a>
-                    </p>
-
-                    <div class="social-links mb-5">
-                        <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer" class="social-icon mx-3">
-                            <i class="bi bi-linkedin display-6"></i>
-                        </a>
-                        <a href="https://github.com/yourgithubusername" target="_blank" rel="noopener noreferrer" class="social-icon mx-3">
-                            <i class="bi bi-github display-6"></i>
-                        </a>
-                        </div>
-
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-section py-4 text-center">
-        <div class="container">
-            <p class="mb-0">
-                &copy; <span id="current-year"></span> Elijah Jones. All rights reserved.
-            </p>
-            <div class="footer-social-links mt-3">
-                <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer" class="social-icon-footer mx-2">
-                    <i class="bi bi-linkedin fs-4"></i>
-                </a>
-                <a href="https://github.com/yourgithubusername" target="_blank" rel="noopener noreferrer" class="social-icon-footer mx-2">
-                    <i class="bi bi-github fs-4"></i>
-                </a>
-                </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcCWihsufgTzFNlI+N" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+  // Screen click interaction
+  const screen = document.getElementById('screen');
+  screen.addEventListener('click', () => {
+    screen.classList.toggle('active');
+    alert("Screen clicked! Boot sequence starting...");
+  });
+</script>
 
 </body>
 </html>
+
+
+<svg width="1307" height="848" viewBox="0 0 1307 848" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+<defs>
+
+</defs>
+</svg>
+
+
