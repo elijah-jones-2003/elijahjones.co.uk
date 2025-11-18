@@ -8,6 +8,25 @@ html {
 
 
 
+/* Pi Container */
+#pi-container {
+  overflow: hidden;
+  position: relative; 
+}
+
+/* Quick Links Label */
+.quick-links-title {
+  margin-bottom: 10px;   /* space between text and Pi */
+  color: #ffffff;        
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+
+
+
+
 
 /* Hero Section Styles */
 .hero-section {
