@@ -1,12 +1,6 @@
-
-
-
-
 html {
     scroll-behavior: smooth;
 }
-
-
 
 /* Pi Container */
 #pi-container {
@@ -21,12 +15,6 @@ html {
   font-weight: bold;
   font-size: 2rem;
 }
-
-
-
-
-
-
 
 /* Hero Section Styles */
 .hero-section {
