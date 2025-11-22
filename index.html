@@ -48,27 +48,11 @@
 
     .hotspot:hover { filter: drop-shadow(0 0 12px #00FFD1); }
 
+
   </style>
 </head>
+<div id="power-overlay"></div>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-          <a class="navbar-brand" href="#">Elijah Jones</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
 
   <!-- Quick Links Section -->
 <section class="quick-links-section py-5" style="position: relative; background-color:#121212;">
@@ -77,12 +61,11 @@
       <!-- Left: Profile -->
       <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
         <img src="images/elijah_placeholder.jpeg" alt="Profile Picture" class="profile-pic mb-3">
-        <p class="lead">Hello, I'm Elijah Jones. Please use the Pi for quick navigation.</p>
+        <p class="lead">Hello, I'm Elijah Jones. You can use the pi to navigate if you'd like.</p>
       </div>
       <!-- Right: Pi SVG -->
       <div class="col-md-8 text-center">
-        <!-- Quick Links Label -->
-        <h2 class="quick-links-title">Quick Links</h2>
+        <div id="pi-wrapper" style="position: relative; display: flex; justify-content: center; align-items: center;">
         <div id="pi-container">
 <svg width="1307" height="848" viewBox="0 0 1307 848" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Frame 1" clip-path="url(#clip0_2_560)">
@@ -148,7 +131,8 @@
 <circle id="GPIO pin 7" cx="243" cy="78" r="5" fill="#CAD0CC"/>
 <circle id="GPIO pin 8" cx="243" cy="41" r="5" fill="#CAD0CC"/>
 </g>
-<g id="AI Cars">
+
+<g id="USB2" class="hotspot" data-link="pages/ai_cars.html" style="cursor: pointer">
 <path id="USB2.0" d="M1023 50C1023 44.4771 1027.48 40 1033 40H1273V230H1033C1027.48 230 1023 225.523 1023 220V50Z" fill="url(#paint2_linear_2_560)"/>
 <text id="AI Cars_2" fill="#8F8F8F" xml:space="preserve" style="white-space: pre" font-family="Chivo" font-size="48" font-weight="500" letter-spacing="0em"><tspan x="1122.24" y="120.06">AI </tspan><tspan x="1092.5" y="177.06">Cars</tspan></text>
 </g>
@@ -160,7 +144,18 @@
 <path id="USB3.0" d="M1023 315C1023 309.477 1027.48 305 1033 305H1273V495H1033C1027.48 495 1023 490.523 1023 485V315Z" fill="url(#paint4_linear_2_560)"/>
 <text id="RAT-Net" fill="#8F8F8F" xml:space="preserve" style="white-space: pre" font-family="Chivo" font-size="48" font-weight="500" letter-spacing="0em"><tspan x="1055.02" y="415.06">RAT-Net</tspan></text>
 </g>
+<g id = "Wireless and Bluetooth">
 <rect id="Wireless and Bluetooth" x="122" y="109" width="149" height="179" rx="5" fill="#C8C8C8"/>
+<image
+    id="maillogo"
+    href="images/mail.png"
+    x="126.5"
+    y="128.5"
+    width="140"
+    height="140"
+  />
+</g>
+
 <g id="MicroHDMI1" class="hotspot" data-link="https://www.linkedin.com/in/elijah-jones-96ab7a357/" style="cursor: pointer">
 <path id="Micro HDMI 2" d="M538 719C538 713.477 542.477 709 548 709H601C606.523 709 611 713.477 611 719V825H538V719Z" fill="url(#paint5_linear_2_560)"/>
 <image
@@ -203,7 +198,7 @@
 </g>
 <g id="CPU">
 <rect id="Processor" x="364" y="358" width="240" height="240" rx="5" fill="url(#paint8_linear_2_560)"/>
-<text id="CV" fill="#8E8E8E" xml:space="preserve" style="white-space: pre" font-family="Chivo" font-size="48" font-weight="500" letter-spacing="0em"><tspan x="452.328" y="495.06">CV</tspan></text>
+<text id="CV" fill="#8f8f8f" xml:space="preserve" style="white-space: pre" font-family="Chivo" font-size="96" font-weight="500" letter-spacing="0em"><tspan x="421" y="509">CV</tspan></text>
 </g>
 <rect id="IO controller" x="703" y="230" width="170" height="170" rx="10" fill="#474849"/>
 <rect id="SRAM" x="387" y="179" width="200" height="140" rx="5" fill="#474849"/>
@@ -234,7 +229,7 @@
 <rect id="Rectangle 7" x="818" y="133" width="20" height="9" fill="#AFCDC1"/>
 <rect id="Rectangle 6" x="818" y="118" width="20" height="9" fill="#AFCDC1"/>
 </g>
-<g id="on/off button">
+<g id="on/off button" class="power-button" style="cursor:pointer">
 <rect id="Rectangle 17" x="12" y="518" width="13" height="37" rx="1" fill="#9F9F9F"/>
 <rect id="Rectangle 15" x="23" y="500" width="28" height="76" rx="1" fill="#CED1C6"/>
 <path id="Rectangle 14_2" d="M26 508C26 507.448 26.4477 507 27 507H51V567H27C26.4477 567 26 566.552 26 566V508Z" fill="#474849"/>
@@ -341,10 +336,15 @@
 </clipPath>
 </defs>
 </svg>
+            <div id="power-message" class="hidden">
+                <p>That was powering the site… please turn it back on!</p>
+                <span class="arrow">---></span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+</div>
   </section>
 
   <section id="about" class="about-section py-5">
@@ -440,39 +440,16 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section py-5 text-center">
-        <div class="container">
-            <h2 class="display-5 fw-bold mb-4">Contact Me</h2>
-            <p class="lead mb-5">
-                If you have any questions, feel free to contact me
-            </p>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="contact-item mb-4">
-                        <i class="bi bi-envelope-fill me-2"></i> Email: <a href="mailto:notarealemail@gmail.com" class="text-decoration-none">notarealemail@gmail.com</a>
-                    </p>
-
-                    <div class="social-links mb-5">
-                        <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer" class="social-icon mx-3">
-                            <i class="bi bi-linkedin display-6"></i>
-                        </a>
-                        <a href="https://github.com/yourgithubusername" target="_blank" rel="noopener noreferrer" class="social-icon mx-3">
-                            <i class="bi bi-github display-6"></i>
-                        </a>
-                        </div>
-
-                    </div>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer-section py-4 text-center">
         <div class="container">
-            <p class="mb-0">
-                &copy; <span id="current-year"></span> Elijah Jones. All rights reserved.
+            <h2 class="display-5 fw-bold mb-2">Contact Info</h2>
+            <p class="mb-2">
+                Please feel free to contact me if you have any questions.
             </p>
-            <div class="footer-social-links mt-3">
+            <p class="contact-item mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i> Email: <a href="mailto:notarealemail@gmail.com" class="text-decoration-none">notarealemail@gmail.com</a>
+            </p>
+            <div class="footer-social-links mt-2">
                 <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer" class="social-icon-footer mx-2">
                     <i class="bi bi-linkedin fs-4"></i>
                 </a>
@@ -480,21 +457,13 @@
                     <i class="bi bi-github fs-4"></i>
                 </a>
                 </div>
+            <p class="mb-0 mt-2">
+                &copy; <span id="current-year"></span> Elijah Jones.
+            </p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcCWihsufgTzFNlI+N" crossorigin="anonymous"></script>
-    <script>
-        // Navigate on Pi hotspot click
-        document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('.hotspot').forEach(el => {
-            el.addEventListener('click', () => {
-            const link = el.getAttribute('data-link');
-            if (link) window.location.href = link;
-            });
-        });
-        });
-    </script>
     <script src="js/main.js"></script>
 
 </body>
