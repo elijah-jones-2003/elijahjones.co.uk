@@ -2,39 +2,48 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hero Section Styles */
+/* CRT Scanline Effect */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.25) 50%
+    ), linear-gradient(
+        90deg, 
+        rgba(255, 0, 0, 0.06), 
+        rgba(0, 255, 0, 0.02), 
+        rgba(0, 0, 255, 0.06)
+    );
+    z-index: 9999;
+    pointer-events: none;
+    background-size: 100% 4px, 3px 100%;
+}
+
+/* Retro Retro-Futuristic Palette & Base Styles */
+body {
+    background-color: #0a0a0a; /* Very dark tech background */
+    color: #00ff41; /* Classic Terminal Green */
+    /*font-palette: 'Courier New', Courier, monospace; Monospace for that dev feel */
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5); /* Subtle glow */
+}
+
+/* Hero Section - Reimagined as a Terminal Screen */
 .hero-section {
-  background-color: #12460a; /* Light gray background */
-  color: #343a40; /* Dark text */
-  padding: 4rem 0; /* Top and bottom padding */
+  background-color: #050505; 
+  color: #00ff41;
+  padding: 4rem 0;
+  border-bottom: 2px solid #00ff41;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
 }
 
-.hero-section h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.hero-section p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
-
-.hero-section .btn-primary {
-  background-color: #007bff; /* Bootstrap's primary blue */
-  border-color: #007bff;
-}
-
-.hero-section .btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border-color: #0056b3;
-}
-
-.hero-section img {
-  max-width: 100%; /* Make sure image doesn't overflow */
-  border-radius: 50%; /* Keep it a circle */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
 
 /* About Me Section Styles */
 .about-section {
