@@ -27,7 +27,7 @@ body::before {
 
 /* Retro Retro-Futuristic Palette & Base Styles */
 body {
-    background-color: #4d0202; /* Very dark tech background */
+    background-color: #0e0e0e; /* Very dark tech background */
     color: #00ff41; /* Classic Terminal Green */
     /*font-palette: 'Courier New', Courier, monospace; Monospace for that dev feel */
     font-family: 'Courier New', Courier, monospace;
