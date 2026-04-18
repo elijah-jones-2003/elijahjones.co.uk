@@ -1,0 +1,98 @@
+/* 1. Layout & Background */
+.portfolio-pi-wrapper {
+  background-color: #0f0f0f; /* Slightly darker for more contrast */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#pi-container {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 2. Power States */
+.power-on svg {
+  filter: drop-shadow(0 0 20px rgba(34, 200, 139, 0.1));
+}
+
+.power-off svg {
+  /* The "Dead" Pi Look */
+  filter: grayscale(100%) brightness(0.15) blur(1px);
+  pointer-events: none; /* Disables all hotspots while off */
+}
+
+/* Keep the power button group interactive even when board is "off" */
+.power-off .power-button-group,
+.power-off #on\/off\ button { 
+  pointer-events: auto !important;
+  filter: grayscale(0%) brightness(5); /* Make the switch "glow" so users find it */
+}
+
+/* 3. Interactive Hotspots (USB, CPU, etc.) */
+.hotspot {
+  cursor: pointer;
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.hotspot:hover {
+  filter: brightness(1.4) drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+  transform: translateY(-2px);
+}
+
+/* Ensure text inside SVG doesn't block clicks */
+svg text {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 4. The "System Offline" Overlay */
+#power-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(220, 38, 38, 0.9); /* Sharp Red */
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#power-message p {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#power-message .arrow {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  animation: pointToButton 1.5s infinite;
+}
+
+/* Make the Pi responsive on smaller screens */
+@media (max-width: 768px) {
+  #pi-container {
+    transform: scale(0.9);
+  }
+  
+  #power-message {
+    width: 80%;
+    padding: 1.5rem;
+  }
+}
