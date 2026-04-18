@@ -1,4 +1,3 @@
-import React from 'react';
 import Pi from './components/Pi';
 import './App.css';
 
