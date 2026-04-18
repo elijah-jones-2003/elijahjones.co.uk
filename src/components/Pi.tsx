@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Pi.css';
+import linkedinIcon from '../assets/icone-linkedin-grise.png';
+import githubIcon from '../assets/icone-github-grise.png';
+import mailImg from '../assets/mail.png';
 
 const Pi: React.FC = () => {
   const [isPoweredOn, setIsPoweredOn] = useState(true);
@@ -16,133 +19,175 @@ const Pi: React.FC = () => {
   return (
     <div className="portfolio-pi-wrapper">
       <div id="pi-container" className={isPoweredOn ? 'power-on' : 'power-off'}>
+
         <svg 
-          width="100%" 
-          height="auto" 
-          viewBox="0 0 1307 848" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1307 848" 
+        preserveAspectRatio="xMidYMid meet" 
+        xmlns="http://www.w3.org/2000/svg"
+        className="main-pi-svg"
         >
-          <g id="Frame 1" clipPath="url(#clip0_2_560)">
-            <g id="board with clips">
-                <rect x="0" y="0" width="1200" height="800" rx="40" fill="#2ba67a"
-                />
-                <g id="Mounting Holes">
-                    <circle cx="70" cy="60" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
-                    <circle cx="70" cy="60" r="25" fill="#0f0f0f" />
-                    
-                    <circle cx="70" cy="740" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
-                    <circle cx="70" cy="740" r="25" fill="#0f0f0f" />
-                    
-                    <circle cx="890" cy="740" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
-                    <circle cx="890" cy="740" r="25" fill="#0f0f0f" />
-                    
-                    {/* Top-Right */}
-                    <circle cx="890" cy="60" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
-                    <circle cx="890" cy="60" r="25" fill="#0f0f0f" />
+
+            <g id="Frame 1">
+                <g id="board with clips">
+                    <rect x="15" y="0" width="1200" height="800" rx="40" fill="#2ba67a"
+                    />
+                    <g id="Mounting Holes">
+                        <circle cx="70" cy="60" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
+                        <circle cx="70" cy="60" r="25" fill="#0f0f0f" />  
+                        <circle cx="70" cy="740" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
+                        <circle cx="70" cy="740" r="25" fill="#0f0f0f" />
+                        
+                        <circle cx="890" cy="740" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
+                        <circle cx="890" cy="740" r="25" fill="#0f0f0f" />
+                        
+                        {/* Top-Right */}
+                        <circle cx="890" cy="60" r="30" stroke="#F4E387" strokeWidth="20" fill="none" />
+                        <circle cx="890" cy="60" r="25" fill="#0f0f0f" />
+                    </g>
                 </g>
-            </g>
 
-            <g id="GPIO">
-              <rect x="125" y="22" width="715" height="75" rx="10" fill="#4C4D4F"/>
-              {Array.from({ length: 20 }).map((_, index) => {
-                const xOffset = 150 + (index * 35); 
-                return (
-                <g key={index}>
-                    <circle cx={xOffset} cy="40" r="5" fill="#CAD0CC" />
-                    <circle cx={xOffset} cy="80" r="5" fill="#CAD0CC" />
+                <g id="GPIO">
+                <rect x="125" y="22" width="715" height="75" rx="10" fill="#4C4D4F"/>
+                {Array.from({ length: 20 }).map((_, index) => {
+                    const xOffset = 150 + (index * 35); 
+                    return (
+                    <g key={index}>
+                        <circle cx={xOffset} cy="40" r="5" fill="#CAD0CC" />
+                        <circle cx={xOffset} cy="80" r="5" fill="#CAD0CC" />
+                    </g>
+                    );
+                })}
                 </g>
-                );
-            })}
-            </g>
 
-            <g id="USB1" className="hotspot" onClick={() => handleLink('pages/ai_cars.html')}>
-            <rect x="1020" y="40" width="250" height="190" rx="10" fill="#d1d5db" />
-            <text fill="#4b5563" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
-                <tspan x="1145" y="150">AI CARS</tspan>
-            </text>
-            </g>
+                <g id="USB1" className="hotspot" onClick={() => handleLink('pages/ai_cars.html')}>
+                    <rect x="1020" y="40" width="250" height="190" rx="10" fill="#d1d5db" />
+                    <text fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
+                        <tspan x="1145" y="150">AI CARS</tspan>
+                    </text>
+                </g>
 
-            <g id="USB2" className="hotspot" onClick={() => handleLink('pages/ratnet.html')}>
-            <rect x="1020" y="280" width="250" height="190" rx="10" fill="#d1d5db" />
-            <text fill="#4b5563" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
-                <tspan x="1145" y="390">RATNET</tspan>
-            </text>
-            </g>
+                <g id="USB2" className="hotspot" onClick={() => handleLink('pages/ratnet.html')}>
+                    <rect x="1020" y="280" width="250" height="190" rx="10" fill="#d1d5db" />
+                    <text fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
+                        <tspan x="1145" y="390">RATNET</tspan>
+                    </text>
+                </g>
 
-            <g id="Ethernet" className="hotspot" onClick={() => handleLink('pages/home_lab.html')}>
-            <rect x="970" y="530" width="302" height="230" rx="10" fill="#d1d5db" />
-            <text fill="#4b5563" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
-                <tspan x="1120" y="655">HOME LAB</tspan>
-            </text>
-            </g>
+                <g id="Ethernet" className="hotspot" onClick={() => handleLink('pages/home_lab.html')}>
+                    <rect x="970" y="530" width="302" height="230" rx="10" fill="#d1d5db" />
+                    <text fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="38" fontWeight="600"textAnchor="middle">
+                        <tspan x="1120" y="655">HOME LAB</tspan>
+                    </text>
+                </g>
 
-            {/* CPU: CV Link */}
-            <g id="CPU" className="hotspot" onClick={() => handleLink('/cv.pdf')}>
-              <rect x="364" y="358" width="240" height="240" rx="5" fill="url(#paint8_linear_2_560)"/>
-              <text fill="#8f8f8f" fontFamily="Chivo" fontSize="96" fontWeight="500">
-                <tspan x="421" y="500">CV</tspan>
-              </text>
-            </g>
+                <g id="CPU" className="hotspot" onClick={() => handleLink('/cv.pdf')}>
+                <rect x="364" y="358" width="240" height="240" rx="5" fill="#d1d5db"/>
+                <text fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="96" fontWeight="500">
+                    <tspan x="420" y="510">CV</tspan>
+                </text>
+                </g>
 
-            {/* LinkedIn Hotspot */}
-            <g id="MicroHDMI1" className="hotspot" onClick={() => handleLink('https://linkedin.com/in/elijah-jones')}>
-              <path d="M538 719C538 713.477 542.477 709 548 709H601C606.523 709 611 713.477 611 719V825H538V719Z" fill="url(#paint5_linear_2_560)"/>
-              <image href="images/icone-linkedin-grise.png" x="546" y="739" width="57" height="57" />
-            </g>
+                <g id="LinkedIn" className="hotspot" onClick={() => handleLink('https://linkedin.com/in/elijah-jones')}>
+                <rect x="540" y="710" width="75" height="120" rx="6" fill="#d1d5db" />
+                <image href={linkedinIcon} x="550" y="740" width="57" height="57" />
+                </g>
 
-            {/* GitHub Hotspot */}
-            <g id="MicroHDMI2" className="hotspot" onClick={() => handleLink('https://github.com/elijah-jones-2003')}>
-              <path d="M345 719C345 713.477 349.477 709 355 709H408C413.523 709 418 713.477 418 719V825H345V719Z" fill="url(#paint6_linear_2_560)"/>
-              <image href="images/icone-github-grise.png" x="349" y="735" width="65" height="65" />
-            </g>
+                <g id="GitHub" className="hotspot" onClick={() => handleLink('https://github.com/elijah-jones-2003')}>
+                <rect x="345" y="710" width="75" height="120" rx="6" fill="#d1d5db" />
+                <image href={githubIcon} x="350" y="740" width="65" height="65" />
+                </g>
 
-            {/* POWER BUTTON */}
-            <g id="on/off button" style={{ cursor: 'pointer' }} onClick={togglePower}>
-              <rect x="12" y="518" width="13" height="37" rx="1" fill={isPoweredOn ? "#22C88B" : "#9F9F9F"} />
-              <rect x="23" y="500" width="28" height="76" rx="1" fill="#CED1C6"/>
-              <path d="M26 508C26 507.448 26.4477 507 27 507H51V567H27C26.4477 567 26 566.552 26 566V508Z" fill="#474849"/>
-            </g>
+                <g id="Power" className="hotspot" onClick={() => handleLink('https://your-portfolio-link.com')}>
+                    <rect x="120" y="710" width="120" height="120" rx="10" fill="#d1d5db" />
+                    <text x="180" y="790" fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="48" fontWeight="600" textAnchor="middle">EJ</text>
+                </g>
 
-            <text fill="white" fontFamily="Chivo" fontSize="64">
-              <tspan x="342" y="164">Portfolio Pi</tspan>
-            </text>
+                <g id="Wireless-Bluetooth">
+                    <rect x="120" y="110" width="150" height="180" rx="5" fill="#d1d5db"/>
+                    <image href={mailImg} x="125" y="130" width="140" height="140" /> 
+                </g>
 
-            <defs>
-              <filter id="filter0_f_2_560" x="-33" y="-44" width="1320" height="920" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="30" result="effect1_foregroundBlur_2_560"/>
-              </filter>
-              <radialGradient id="paint0_radial_2_560" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(627 416) scale(600 900)">
-                <stop stopColor="#26916A"/><stop offset="1" stopColor="#22C88B" stopOpacity="0"/>
-              </radialGradient>
-              <radialGradient id="paint1_radial_2_560" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(627 418) scale(600 900)">
-                <stop stopColor="#22C88B"/><stop offset="1" stopColor="#26916A"/>
-              </radialGradient>
-              <linearGradient id="paint2_linear_2_560" x1="1148" y1="40" x2="1148" y2="230" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#F8F3EC"/><stop offset="0.5" stopColor="#C5C1BB"/><stop offset="1" stopColor="#928F8B"/>
-              </linearGradient>
-              <linearGradient id="paint3_linear_2_560" x1="1122" y1="548" x2="1122" y2="778" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#F8F3EC"/><stop offset="0.5" stopColor="#C5C1BB"/><stop offset="1" stopColor="#928F8B"/>
-              </linearGradient>
-              <linearGradient id="paint5_linear_2_560" x1="574.5" y1="709" x2="574.5" y2="825" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#F8F3EC"/><stop offset="0.5" stopColor="#C5C1BB"/><stop offset="1" stopColor="#928F8B"/>
-              </linearGradient>
-              <linearGradient id="paint6_linear_2_560" x1="381.5" y1="709" x2="381.5" y2="825" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#F8F3EC"/><stop offset="0.5" stopColor="#C5C1BB"/><stop offset="1" stopColor="#928F8B"/>
-              </linearGradient>
-              <linearGradient id="paint8_linear_2_560" x1="484" y1="358" x2="484" y2="598" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#F8F3EC"/><stop offset="0.5" stopColor="#C5C1BB"/><stop offset="1" stopColor="#928F8B"/>
-              </linearGradient>
-              <clipPath id="clip0_2_560"><rect width="1307" height="848" fill="white"/></clipPath>
-            </defs>
-          </g>
+                <g id="DSI-CSI-Connectors">
+                    <rect x="775" y="550" width="40" height="240" rx="5" fill="#A2775B"/>
+                    <rect x="700" y="550" width="40" height="240" rx="5" fill="#A2775B"/>
+
+                    <rect x="810" y="560" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="590" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="620" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="650" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="680" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="710" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="740" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="810" y="770" width="20" height="10" fill="#AFCDC1"/> 
+
+                    <rect x="735" y="560" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="590" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="620" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="650" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="680" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="710" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="740" width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="735" y="770" width="20" height="10" fill="#AFCDC1"/> 
+                </g>
+
+                <g id="PCI-Express">
+                    <rect x="40" y="275" width="40" height="190" fill="#A2775B"/>
+                    <rect x="80" y={290} width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="80" y={320} width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="80" y={350} width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="80" y={380} width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="80" y={410} width="20" height="10" fill="#AFCDC1"/>
+                    <rect x="80" y={440} width="20" height="10" fill="#AFCDC1"/>
+                </g>
+
+                <g id="IO-Controller">
+                    <rect x="680" y="230" width="170" height="170" rx="10" fill="#474849"/>
+                    <text fill="#E2E5D9" fontFamily="-apple-system, sans-serif" fontSize="32" fontWeight="600">
+                        <tspan x="705" y="325">Projects</tspan>
+                    </text>
+                </g>
+
+                <rect id="SRAM" x="387" y="179" width="200" height="140" rx="5" fill="#474849"/>
+                
+                <g id="on/off button" style={{ cursor: 'pointer' }} onClick={togglePower}>
+                    <rect x="20" y="500" width="30" height="80" rx="1" fill="#d1d5db"/>
+                    <rect x="5" y="520" width="15" height="40" rx="1" fill="#8e8e8e"/>
+                </g>        
+
+                <g id="Silkscreen" fontFamily="-apple-system, sans-serif" fontWeight="600">
+                    <g>
+                        <rect x="862" y="302" width="130 " height="32" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="870" y="325" fill="white" fontSize="24">Favourites</text>
+                    </g>
+                    <g>
+                        <rect x="140" y="467" width="180" height="45" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="150" y="500" fill="white" fontSize="36">About Me</text>
+                    </g>
+                    <g>
+                        <rect x="330" y="110" width="305" height="60" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="340" y="160" fill="white" fontSize="58">Portfolio Pi</text>
+                    </g>
+                    <g id="Lines" stroke="white" strokeWidth="3"> 
+                        {/* Projects */}
+                        <line x1="1000" y1="530" x2="1000" y2="180"/>
+                        <line x1="850" y1="350" x2="1020" y2="350"/>
+                        <line x1="1000" y1="180" x2="1020" y2="180"/>
+                        {/* About me */}
+                        <line x1="180" y1="467" x2="180" y2="290"/>
+                        <line x1="180" y1="513" x2="180" y2="710"/>
+                        <line x1="180" y1="670" x2="570" y2="670"/>
+                        <line x1="570" y1="710" x2="570" y2="670"/>
+                        <line x1="385" y1="710" x2="385" y2="670"/>
+                        <line x1="230" y1="513" x2="230" y2="563"/>
+                        <line x1="230" y1="563" x2="365" y2="563"/>
+                    </g>           
+                </g>
+            </g>  
         </svg>
 
         {!isPoweredOn && (
           <div id="power-message">
-            <p>That was powering the site… please turn it back on!</p>
+            <p>That was powering the site… please turn it back on</p>
           </div>
         )}
       </div>

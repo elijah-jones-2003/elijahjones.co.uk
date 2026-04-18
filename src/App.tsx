@@ -1,13 +1,27 @@
-import Pi from './components/Pi.tsx'; // Assuming you named the file Pi.tsx
-import './components/Pi.css';   // The new CSS file I gave you
+import React from 'react';
+import Pi from './components/Pi';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      {/* 
-      */}
-      <Pi />
-    </div>
+    <main className="workbench">
+      
+      {/* Centered Pi Component */}
+      <div className="pi-wrapper">
+        <Pi />
+      </div>
+
+      {/* Optional: Add a small "footer" hint */}
+      <p style={{ 
+        position: 'absolute', 
+        bottom: '20px', 
+        color: 'rgba(255,255,255,0.3)', 
+        fontSize: '12px',
+        zIndex: 5 
+      }}>
+        Click components to explore
+      </p>
+    </main>
   );
 }
 
