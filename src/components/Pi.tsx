@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Pi.css';
 import linkedinIcon from '../assets/icone-linkedin-grise.png';
 import githubIcon from '../assets/icone-github-grise.png';
+import youtubeIcon from '../assets/youtube-icon.png';
 import mailImg from '../assets/mail.png';
 
 interface PiProps {onNavigate: (view: string) => void;}
@@ -106,7 +107,7 @@ const Pi: React.FC<PiProps> = ({ onNavigate }) => {
                     <text x="180" y="790" fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="48" fontWeight="600" textAnchor="middle">EJ</text>
                 </g>
 
-                <g id="Wireless-Bluetooth">
+                <g id="Wireless-Bluetooth" className='Hotspot' onClick={ () => handleLink('mailto:ej@elijahjones.co.uk')} >
                     <rect x="120" y="110" width="150" height="180" rx="5" fill="#d1d5db"/>
                     <image href={mailImg} x="125" y="130" width="140" height="140" /> 
                 </g>
@@ -151,7 +152,10 @@ const Pi: React.FC<PiProps> = ({ onNavigate }) => {
                     </text>
                 </g>
 
-                <rect id="SRAM" x="387" y="179" width="200" height="140" rx="5" fill="#474849"/>
+                <g id="RAM" className="hotspot" onClick={() => handleLink('https://www.youtube.com/@elijahjones6525')}>
+                    <rect x="390" y="185" width="200" height="140" rx="5" fill="#474849"/>
+                    <image href={youtubeIcon} x="410" y="205" width="160" height="100" />
+                </g>
                 
                 <g id="on/off button" style={{ cursor: 'pointer' }} onClick={togglePower}>
                     <rect x="20" y="500" width="30" height="80" rx="1" fill="#d1d5db"/>
@@ -208,7 +212,7 @@ const Pi: React.FC<PiProps> = ({ onNavigate }) => {
 
         {!isPoweredOn && (
           <div id="power-message">
-            <p>That was powering the site… please turn it back on</p>
+            <p>Why did you turn it off? Please turn it back on to make use of the links</p>
           </div>
         )}
       </div>
