@@ -1,83 +1,237 @@
-:root {
-  --mat-green: #1b3d2f;
-  --line-light: rgba(255, 255, 255, 0.04);
-  --line-heavy: rgba(255, 255, 255, 0.1);
-  --text-white: #f3f4f6;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1b3d2f;
-}
-
 .workbench {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the center-container */
+  align-items: center;     /* Horizontally centers the center-container */
+  padding: 40px 20px;      
+  box-sizing: border-box;
+  overflow-y: auto;        
+  /* Do not add background-color here to keep your cutting board look */
+}
+
+.center-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures the header is centered over the row */
+}
+
+.portfolio-header {
+  margin-bottom: 40px; /* Space between name and content */
+}
+
+.portfolio-header h1 {
+  font-size: 3rem;
+  letter-spacing: 8px;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+/* The new container holding your bio and the Pi side-by-side */
+.main-content-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns Bio and Pi vertically to each other */
   justify-content: center;
-  position: relative;
-  overflow: hidden; 
-  
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
-  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  gap: 40px;
+  width: 100%;
 }
 
-.workbench::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.4) 100%);
-  pointer-events: none;
+.me-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.mat-label {
-  position: absolute;
-  top: 20px;
-  left: 25px;
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
-  color: var(--line-heavy);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  z-index: 1;
+.pi-section {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 3px solid var(--line-heavy);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 3px solid var(--line-heavy);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Makes sure the Pi scales nicely */
+.pi-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pi-wrapper {
-  width: 85%;
-  max-width: 1000px;
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6));
-  z-index: 2;
-  /* Removed: transform and transition from here */
-}
-
-.pi-wrapper svg {
-  display: block;
   width: 100%;
-  height: auto;
+}
+/* About page */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* --- THE FIX: NEW HOTSPOT LOGIC --- */
+.page-title {
+  font-family: var(--mono);
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
 
-.hotspot {
+.subtitle {
+  font-family: var(--mono);
+  color: var(--line-heavy);
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 4rem;
+}
+
+.about-section h3 {
+  font-family: var(--mono);
+  color: #4ade80; /* A "terminal" green */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category h4 {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+}
+
+.history-item {
+  margin-bottom: 20px;
+}
+
+.history-item .date {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--line-heavy);
+}
+
+/* Projects Page */
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  /* Creates a responsive grid that fits as many cards as it can */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #4ade80; /* Match the About Me green */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card-browser-bar {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+.card-browser-bar .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.project-tech {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #4ade80;
+  margin-bottom: 15px;
+}
+
+.card-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid transparent;
+}
+
+.card-link:hover {
+  color: white;
+  border-bottom: 1px solid #4ade80;
+}
+
+.content-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a; 
+  padding: 60px 10%;
+  color: white;
+}
+
+.back-to-pi {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 15px;
   cursor: pointer;
-  transition: transform 0.2s ease-out, filter 0.2s ease-out;
-  /* Crucial: ensures parts scale from their own center, not the board corner */
-  transform-box: fill-box;
-  transform-origin: center;
+  font-family: monospace;
+  z-index: 100;
 }
 
-.hotspot:hover {
-  /* This lifts ONLY the port/chip you touch */
-  transform: scale(1.05) translateY(-5px);
-  filter: brightness(1.1);
+.back-to-pi:hover {
+  background: #444;
 }
-
-/* --------------------------------- */

@@ -4,7 +4,10 @@ import linkedinIcon from '../assets/icone-linkedin-grise.png';
 import githubIcon from '../assets/icone-github-grise.png';
 import mailImg from '../assets/mail.png';
 
-const Pi: React.FC = () => {
+interface PiProps {onNavigate: (view: string) => void;}
+
+const Pi: React.FC<PiProps> = ({ onNavigate }) => {
+
   const [isPoweredOn, setIsPoweredOn] = useState(true);
 
   const togglePower = () => {
@@ -15,6 +18,7 @@ const Pi: React.FC = () => {
     if (!isPoweredOn) return; 
     window.open(url, '_blank');
   };
+
 
   return (
     <div className="portfolio-pi-wrapper">
@@ -97,7 +101,7 @@ const Pi: React.FC = () => {
                 <image href={githubIcon} x="350" y="740" width="65" height="65" />
                 </g>
 
-                <g id="Power" className="hotspot" onClick={() => handleLink('https://your-portfolio-link.com')}>
+                <g id="Power" className="hotspot" onClick={() => onNavigate('about')}>
                     <rect x="120" y="710" width="120" height="120" rx="10" fill="#d1d5db" />
                     <text x="180" y="790" fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="48" fontWeight="600" textAnchor="middle">EJ</text>
                 </g>
@@ -140,10 +144,10 @@ const Pi: React.FC = () => {
                     <rect x="80" y={440} width="20" height="10" fill="#AFCDC1"/>
                 </g>
 
-                <g id="IO-Controller">
-                    <rect x="680" y="230" width="170" height="170" rx="10" fill="#474849"/>
+                <g id="IO-Controller" className='hotspot' onClick={() => onNavigate('projects')}>
+                    <rect x="650" y="230" width="170" height="170" rx="10" fill="#474849"/>
                     <text fill="#E2E5D9" fontFamily="-apple-system, sans-serif" fontSize="32" fontWeight="600">
-                        <tspan x="705" y="325">Projects</tspan>
+                        <tspan x="675" y="325">Projects</tspan>
                     </text>
                 </g>
 
@@ -156,32 +160,49 @@ const Pi: React.FC = () => {
 
                 <g id="Silkscreen" fontFamily="-apple-system, sans-serif" fontWeight="600">
                     <g>
-                        <rect x="862" y="302" width="130 " height="32" rx="5" fill="none" stroke="white" strokeWidth="2"/>
-                        <text x="870" y="325" fill="white" fontSize="24">Favourites</text>
+                        <rect x="700" y="450" width="190" height="50" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="710" y="485" fill="white" fontSize="36">Favourites</text>
                     </g>
                     <g>
-                        <rect x="140" y="467" width="180" height="45" rx="5" fill="none" stroke="white" strokeWidth="2"/>
-                        <text x="150" y="500" fill="white" fontSize="36">About Me</text>
+                        <rect x="140" y="467" width="210" height="45" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="150" y="500" fill="white" fontSize="36">Contact Me</text>
                     </g>
                     <g>
                         <rect x="330" y="110" width="305" height="60" rx="5" fill="none" stroke="white" strokeWidth="2"/>
                         <text x="340" y="160" fill="white" fontSize="58">Portfolio Pi</text>
                     </g>
+                    <g>
+                        <rect x="120" y="650" width="120" height="35" rx="5" fill="none" stroke="white" strokeWidth="2"/>
+                        <text x="125" y="675" fill="white" fontSize="24">About Me</text>
+                    </g>
                     <g id="Lines" stroke="white" strokeWidth="3"> 
                         {/* Projects */}
-                        <line x1="1000" y1="530" x2="1000" y2="180"/>
-                        <line x1="850" y1="350" x2="1020" y2="350"/>
-                        <line x1="1000" y1="180" x2="1020" y2="180"/>
-                        {/* About me */}
+                        <line x1="750" y1="450" x2="750" y2="400"/>
+                        <line x1="920" y1="180" x2="920" y2="600"/>
+                        <line x1="920" y1="370" x2="1020" y2="370"/>
+                        <line x1="920" y1="180" x2="1020" y2="180"/>
+                        <line x1="920" y1="600" x2="970" y2="600"/>
+                        <line x1="920" y1="180" x2="1020" y2="180"/>
+                        <line x1="920" y1="475" x2="890" y2="475"/>
+                        {/* Contact me */}
                         <line x1="180" y1="467" x2="180" y2="290"/>
-                        <line x1="180" y1="513" x2="180" y2="710"/>
-                        <line x1="180" y1="670" x2="570" y2="670"/>
-                        <line x1="570" y1="710" x2="570" y2="670"/>
-                        <line x1="385" y1="710" x2="385" y2="670"/>
+                        <line x1="180" y1="513" x2="180" y2="630"/>
+                        <line x1="180" y1="630" x2="570" y2="630"/>
+                        <line x1="570" y1="710" x2="570" y2="630"/>
+                        <line x1="385" y1="710" x2="385" y2="630"/>
                         <line x1="230" y1="513" x2="230" y2="563"/>
                         <line x1="230" y1="563" x2="365" y2="563"/>
+                        {/* About me */}
+                        <line x1="180" y1="685" x2="180" y2="710"/>
                     </g>           
                 </g>
+                <g id="Interactive-Instructions">
+                    <text x="450" y="870" fill="white" fontFamily="-apple-system, sans-serif" fontSize="24">
+                        Click the ports and chips to navigate
+                    </text>
+                </g>
+
+
             </g>  
         </svg>
 
