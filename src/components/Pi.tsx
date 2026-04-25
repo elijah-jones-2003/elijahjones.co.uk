@@ -107,7 +107,7 @@ const Pi: React.FC<PiProps> = ({ onNavigate }) => {
                     <text x="180" y="790" fill="#8e8e8e" fontFamily="-apple-system, sans-serif" fontSize="48" fontWeight="600" textAnchor="middle">EJ</text>
                 </g>
 
-                <g id="Wireless-Bluetooth" className='Hotspot' onClick={ () => handleLink('mailto:ej@elijahjones.co.uk')} >
+                <g id="Wireless-Bluetooth" className='hotspot' onClick={ () => handleLink('mailto:ej@elijahjones.co.uk')} >
                     <rect x="120" y="110" width="150" height="180" rx="5" fill="#d1d5db"/>
                     <image href={mailImg} x="125" y="130" width="140" height="140" /> 
                 </g>
